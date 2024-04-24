@@ -10,7 +10,7 @@
 /allcurrentweather/portland: SELECT * FROM all_weather WHERE location_name='Portland';
 /allcurrentweather/wilsonville: SELECT * FROM all_weather WHERE location_name='Wilsonville';
 
-/allweatherdescription: SELECT current_weather_main, SUM(count_of_description)FROM all_weather_description GROUP BY current_weather_main ORDER BY SUM(count_of_description) DESC;
+/allweatherdescription: SELECT current_weather_main, SUM(count_of_description) AS count_of_description FROM all_weather_description GROUP BY current_weather_main ORDER BY SUM(count_of_description) DESC;
 
 /allweatherdescription/salem: SELECT * FROM all_weather_description WHERE location_name='Salem' ORDER BY count_of_description DESC;
 
