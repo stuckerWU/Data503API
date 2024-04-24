@@ -1,2 +1,3 @@
 /: SHOW SERVER_VERSION
 /tz: SHOW TIMEZONE
+/alltripweather: SELECT * FROM all_trip_weather;
