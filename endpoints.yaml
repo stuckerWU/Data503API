@@ -6,9 +6,9 @@
 
 /allcurrentweather: SELECT * FROM all_weather;
 
-/allcurrentweather/salem: SELECT * FROM all_weather WHERE location_name='Salem';
-/allcurrentweather/portland: SELECT * FROM all_weather WHERE location_name='Portland';
-/allcurrentweather/wilsonville: SELECT * FROM all_weather WHERE location_name='Wilsonville';
+/allcurrentweather/salem: SELECT location_name, current_temp_fahrenheit, current_humidity_percent, current_clouds_percent, current_ave_visibility_meters, current_wind_speed_meter_sec, current_rain_mm_hour, current_weather_id, (date_trunc('minute', report_date_time)) AS report_date_time_pacific FROM all_weather WHERE location_name='Salem';
+/allcurrentweather/portland: SELECT location_name, current_temp_fahrenheit, current_humidity_percent, current_clouds_percent, current_ave_visibility_meters, current_wind_speed_meter_sec, current_rain_mm_hour, current_weather_id, (date_trunc('minute', report_date_time)) AS report_date_time_pacific FROM all_weather WHERE location_name='Portland';
+/allcurrentweather/wilsonville: SELECT location_name, current_temp_fahrenheit, current_humidity_percent, current_clouds_percent, current_ave_visibility_meters, current_wind_speed_meter_sec, current_rain_mm_hour, current_weather_id, (date_trunc('minute', report_date_time)) AS report_date_time_pacific FROM all_weather WHERE location_name='Wilsonville';
 
 /allweatherdescription: SELECT current_weather_main, SUM(count_of_description)FROM all_weather_description GROUP BY current_weather_main ORDER BY SUM(count_of_description) DESC;
 
