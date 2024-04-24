@@ -1,7 +1,13 @@
 /: SHOW SERVER_VERSION
 /tz: SHOW TIMEZONE
 /alltripsandweather: SELECT * FROM all_trips_and_weather;
-/allcurrentweather: SELECT * FROM all_weather;
-/allcurrentweather/salem: SELECT * FROM all_weather WHERE location_name='Salem';
-/allweatherdescription: SELECT * FROM all_weather_description;
+/alltripsandweather/salem: SELECT * FROM all_trips_and_weather WHERE location_name='Salem';
+/alltripsandweather/portland: SELECT * FROM all_trips_and_weather WHERE location_name='Portland';
 
+/allcurrentweather: SELECT * FROM all_weather;
+
+/allcurrentweather/salem: SELECT * FROM all_weather WHERE location_name='Salem';
+/allcurrentweather/portland: SELECT * FROM all_weather WHERE location_name='Portland';
+/allcurrentweather/wilsonville: SELECT * FROM all_weather WHERE location_name='Wilsonville';
+
+/allweatherdescription: SELECT * FROM all_weather_description;
